@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home Page</title>
+  <title>Start Page</title>
 </head>
 <body>
   <header>
@@ -15,53 +15,11 @@
     </ul>
   </nav>
   <main>
-    <h2>Password Generator</h2>
-    <p>Enter the number of characters and the number of passwords you want, and the script will generate random passwords for you:</p>
-    <form>
-      <label for="characters">Number of characters:</label><br>
-      <input type="text" id="characters" name="characters"><br>
-      <label for="passwords">Number of passwords:</label><br>
-      <input type="text" id="passwords" name="passwords"><br><br>
-      <button type="button" onclick="generatePasswords()">Generate Passwords</button>
-    </form>
-    <br>
-    <div id="output"></div>
+    <h2>Introducing My Website</h2>
+    <p>This is a test website.</p>
   </main>
   <footer>
-    <p>Copyright 2021 My Website</p>
+    <p>https://github.com/NielsNL1</p>
   </footer>
-  <script>
-    function generatePasswords() {
-      // Get the values from the form
-      var howManyCharacters = document.getElementById("characters").value;
-      var howManyPasswords = document.getElementById("passwords").value;
-
-      // Convert the values to integers
-      howManyCharacters = parseInt(howManyCharacters);
-      howManyPasswords = parseInt(howManyPasswords);
-
-      // Define the generatePassword function
-      function generatePassword() {
-        // Create a list of the possible characters in the password
-        var characters = string.ascii_letters + string.digits + string.punctuation;
-
-        // Generate a random password
-        var password = "";
-        for (var i = 0; i < howManyCharacters; i++) {
-          password += characters[Math.floor(Math.random() * characters.length)];
-        }
-
-        // Return the generated password
-        return password;
-      }
-
-      // Generate and print the random passwords
-      var output = "";
-      for (var i = 0; i < howManyPasswords; i++) {
-        output += generatePassword() + "<br>";
-      }
-      document.getElementById("output").innerHTML = output;
-    }
-  </script>
 </body>
 </html>
