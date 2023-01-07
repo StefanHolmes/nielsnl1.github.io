@@ -8,10 +8,14 @@
     <title>My first website</title>
     
     <style>
-      
-      .imgprofile {
+
+.imgcontainer{
+  display: flex;
+  justify-content: center;
+  }
+  
+.imgprofile {
         border-radius: 75px;
-        margin-left: 740px;
         }
 
 .center {
@@ -21,7 +25,10 @@
 .topleft{
   position: absolute; top: 0; left: 0;
   }
-  
+
+.topright{
+  position: absolute; top: 0; right: 0;
+  }
 
     </style>
 
@@ -35,8 +42,10 @@
       <h1>This is my first Website.<h1>
       </div>
     
+      <div class="imgcontainer">
       <img class="imgprofile" src="me.png" alt="A picture of my github profile" />
-   
+      </div>
+    
     <script src="alert100s.js" type="module"></script>
     <noscript><h1>browser doesn't seem to support Javascript</h1></noscript>
     
@@ -59,5 +68,16 @@
     </nav>
     </div>
     
-    <body background="bird.gif">
+    <div class="topright">
+     <select id="background-select">
+      <option value="whitebird.gif">White bird</option>
+      <option value="blackbird.gif">Black bird</option>
+      <option value="white.png">white solid</option>
+      <option value="black.png">black solid</option>
+    </select>
+  </div>
+
+    <script src="background.js" type="module"></script>
+
+    <body background="whitebird.gif">
 </html>
